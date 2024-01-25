@@ -1,0 +1,4 @@
+name: NoElytra
+version: '${version}'
+main: org.rolypolyvole.noelytra.NoElytra
+api-version: '1.20'
