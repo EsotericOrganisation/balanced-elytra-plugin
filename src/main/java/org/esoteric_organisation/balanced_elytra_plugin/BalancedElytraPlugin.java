@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
 public final class BalancedElytraPlugin extends JavaPlugin implements Listener {
 
@@ -16,7 +17,7 @@ public final class BalancedElytraPlugin extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public void onRocketBoost(PlayerInteractEvent event) {
+    public void onRocketBoost(@NotNull PlayerInteractEvent event) {
         boolean usedRocketInWorld =
             event.getMaterial().equals(Material.FIREWORK_ROCKET) &&
             event.getPlayer().isGliding() &&
