@@ -1,4 +1,4 @@
-package org.rolypolyvole.no_elytra_plugin;
+package org.esoteric_organisation.balanced_elytra_plugin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class NoElytraPlugin extends JavaPlugin implements Listener {
+public final class BalancedElytraPlugin extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
