@@ -61,6 +61,7 @@ tasks {
 
 bukkitPluginYaml {
   main = project.group.toString() + groupStringSeparator + pascalcase(rootProject.name)
+  description = "A simple Minecraft plugin that prevents the use of rocket-boosted elytra in the overworld. Made for a private server."
   load = BukkitPluginYaml.PluginLoadOrder.STARTUP
   authors = projectAuthors
   apiVersion = paperApiVersion
