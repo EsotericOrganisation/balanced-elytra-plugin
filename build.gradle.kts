@@ -35,7 +35,9 @@ val mainProjectAuthor = "Esoteric Organisation"
 val topLevelDomain = "org"
 val projectAuthors = listOfNotNull(mainProjectAuthor, "rolyPolyVole", "Esoteric Enderman")
 
-group = topLevelDomain + groupStringSeparator + snakecase(mainProjectAuthor.lowercase()) + groupStringSeparator + snakecase(rootProject.name)
+description = "A simple Minecraft plugin that prevents the use of rocket-boosted elytra in the overworld. Made for a private server."
+
+group = topLevelDomain + groupStringSeparator + "esoteric"
 version = "1.0.0-SNAPSHOT"
 
 val javaVersion = 21
@@ -60,9 +62,12 @@ tasks {
 }
 
 bukkitPluginYaml {
-  main = project.group.toString() + groupStringSeparator + pascalcase(rootProject.name)
-  description = "A simple Minecraft plugin that prevents the use of rocket-boosted elytra in the overworld. Made for a private server."
-  load = BukkitPluginYaml.PluginLoadOrder.STARTUP
+  name = "BalancedElytra"
+  description = project.description
   authors = projectAuthors
+
+  version = project.version.toString()
   apiVersion = paperApiVersion
+  main = project.group.toString() + groupStringSeparator + "minecraft.plugins.elytra.balance" + groupStringSeparator + pascalcase(rootProject.name)
+  load = BukkitPluginYaml.PluginLoadOrder.STARTUP
 }
